@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        #parameterForm{
+            flex-grow: inherit;
+        }
+        label {
+  font-weight: bold;
+  margin-right: 10px; /* Add any other styles you want */
+      }
+input[type="text"] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px; /* Add any other styles you want */
+  background-color:transparent;
+}
+#result{
+    font-weight: bold;
+    color: rgb(235, 94, 94)  ;
+}
+    </style>
+    <title>Bike Rental</title>
+</head>
+<body>
+<section class="text-gray-400 bg-gray-900 body-font">
+  <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
+    <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+      <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">Before they sold out
+        <br class="hidden lg:inline-block">readymade gluten
+      </h1>
+      <p class="mb-8 leading-relaxed">Bike rentals refer to the service of renting bicycles for a specified period, typically by the hour, day, or week. This business model has gained popularity in urban areas, tourist destinations, and for various recreational purposes. chambray.</p>
+      <div class="flex justify-center">
+        <button class="inline-flex text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 rounded text-lg" ><a href="" target="_blank">Github</a></button>
+      </div>
+    </div>
+    <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
+      <img class="object-cover object-center rounded" alt="hero" src="people-adventure-bicycle-bicycles.jpg">
+    </div>
+  </div>
+</section>
+
+
+    <section class="text-gray-400 bg-gray-900 body-font">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="flex flex-col text-center w-full mb-12">
+            <h1 class="sm:text-3xl text-2xl font-medium title-font mb-4 text-white">Bike Rentals Predictions</h1>
+            <p class="lg:w-2/3 mx-auto leading-relaxed text-base"> Enter the details in numerical values</p>
+          </div>
+          <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0 items-end sm:space-x-4 sm:space-y-0 space-y-4">
+            </div>
+        </div>
+        <div class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0 items-end sm:space-x-4 sm:space-y-0 space-y-4">
+
+        <form id="parameterForm" method="POST" class="flex lg:w-2/3 w-full sm:flex-row flex-col mx-auto px-8 sm:px-0 items-end sm:space-x-4 sm:space-y-0 space-y-4">
+            <div class="relative sm:mb-0 flex-grow w-full">
+              <div id="inputFields"></div>
+            </div>
+            <br>
+            <button type="submit" class="text-white bg-red-500 border-0 py-2 px-8 focus:outline-none hover:bg-red-600 rounded text-lg">Predict</button>
+             </form>
+             <div id="result"></div>
+        </div>
+        </section>  
+        <div id="result"></div>
+      </section>
+    
+
+    <script>
+        const parameterNames = ["day", "mnth", "year", "season", "holiday", "weekday", "workingday", "weathersit", "temp", "atemp", "hum", "windspeed"];
+        const form = document.getElementById("parameterForm");
+        const inputFieldsDiv = document.getElementById("inputFields");
+        const resultDiv = document.getElementById("result");
+
+        parameterNames.forEach(parameter => {
+            const label = document.createElement("label");
+            label.textContent = `${parameter}:`;
+            const input = document.createElement("input");
+            input.type = "text";
+            input.id = parameter;
+            input.required = true;
+            inputFieldsDiv.appendChild(label);
+            inputFieldsDiv.appendChild(input);
+            inputFieldsDiv.appendChild(document.createElement("br"));
+        });
+
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
+
+            const inputData = {};
+            parameterNames.forEach(parameter => {
+                inputData[parameter] = document.getElementById(parameter).value;
+            });
+
+            try {
+                const response = await fetch("/predict", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({ Inputs: { data: [inputData] } }),
+                });
+
+                const result = await response.json();
+                const prediction = result.prediction;
+
+                resultDiv.innerText = `Predicted Result: ${prediction}`;
+            } catch (error) {
+                console.error("Error:", error);
+                resultDiv.innerText = "An error occurred.";
+            }
+        });
+    </script>
+</body>
+</html>
