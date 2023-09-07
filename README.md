@@ -37,4 +37,4 @@ To run this project locally or explore the code and data, follow these steps:
 
 2.Access the project link by clicking below:
 
-  bike-rentals.azurewebsites.net
+  https://bike-rentals.azurewebsites.net/
