@@ -14,6 +14,9 @@ Bike rental companies often face challenges in managing their bike fleets effici
 
 Azure AutoML is a powerful tool for automating the machine learning model selection and tuning process. In this project, Azure AutoML is used to explore various algorithms and preprocessing techniques to find the best model for bike rental prediction.
 
+![I have trained data from fetching the csv data from api ](Screenshot 2023-07-22 005940.png)
+
+
 ### Linear Regression
 
 Linear Regression is a fundamental machine learning algorithm used for predicting numeric values. It forms the basis of our bike rental prediction model, helping us understand how different features (e.g., temperature, time of day) impact rental demand.
