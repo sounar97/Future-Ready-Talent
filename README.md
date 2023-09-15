@@ -15,7 +15,7 @@ Bike rental companies often face challenges in managing their bike fleets effici
 Azure AutoML is a powerful tool for automating the machine learning model selection and tuning process. In this project, Azure AutoML is used to explore various algorithms and preprocessing techniques to find the best model for bike rental prediction.
 ![I have fetched the data for traing through the API from Microsoft ](https://github.com/sounar97/Future-Ready-Talent/blob/3cecb4481f0ff6475f4657562a13c0a071288008/Screenshot%202023-07-22%20005940.png)
 
-### I have fetched the data for traing through the API from Microsoft
+### I have fetched the data for training through the API from Microsoft
 
 ### Linear Regression
 
@@ -34,11 +34,11 @@ The MaxAbsScaler is a preprocessing technique used to scale features to a range 
 XGBoost (Extreme Gradient Boosting) is a powerful machine learning library known for its effectiveness in regression tasks. The XGBoostRegressor algorithm is employed to build a robust prediction model, fine-tuned for bike rental demand forecasting.
 ![Alt Text](https://github.com/sounar97/Future-Ready-Talent/blob/b54c2bfee84123c4d556ad6f4a6c90625fd6184e/Screenshot%202023-07-22%20013455.png)
 
-### The Automated ML as have finalised MaxAbsScaler and XGBoostRegressor for the best suited algorithm from above data for traing
+### The Automated ML as have finalised MaxAbsScaler and XGBoostRegressor as the best suited algorithm for above data after training
 
 ![Alt Text](https://github.com/sounar97/Future-Ready-Talent/blob/b54c2bfee84123c4d556ad6f4a6c90625fd6184e/Screenshot%202023-07-22%20015119.png)
 
-### I ahve fetched the API to connect it for my WEB application to interact dynamically
+### I have fetched the API to connect it for my WEB application to interact dynamically
 
 ## Getting Started
 
