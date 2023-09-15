@@ -13,9 +13,9 @@ Bike rental companies often face challenges in managing their bike fleets effici
 ### Azure AutoML
 
 Azure AutoML is a powerful tool for automating the machine learning model selection and tuning process. In this project, Azure AutoML is used to explore various algorithms and preprocessing techniques to find the best model for bike rental prediction.
+![I have fetched the data for traing through the API from Microsoft ](https://github.com/sounar97/Future-Ready-Talent/blob/3cecb4481f0ff6475f4657562a13c0a071288008/Screenshot%202023-07-22%20005940.png)
 
-![I have trained data from fetching the csv data from api ](Screenshot 2023-07-22 005940.png)
-
+I have fetched the data for traing through the API from Microsoft
 
 ### Linear Regression
 
