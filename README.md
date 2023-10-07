@@ -1,5 +1,5 @@
 # Future-Ready-Talent
-Bike Rentals Prediction Using Azure Automated ML and Hosting on STATIC WEB SERVICES
+Bike Rentals Prediction Using Azure Automated ML and Hosting on Azure WEB APP SERVICES
 # Bike Rental Prediction
 
 This project is aimed at predicting bike rental demand using machine learning techniques. It leverages Azure AutoML, Linear Regression, and the MaxAbsScaler and XGBoostRegressor algorithms to make accurate predictions.
